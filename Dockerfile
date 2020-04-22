@@ -1,8 +1,10 @@
 #BASE IMAGE
-FROM ubuntu:18.04
-MAINTAINER Vipin Rai (XXXXXX@gmail.com)
+FROM openjdk:8
+MAINTAINER Vipin Rai
+RUN mkdir /usr/src/myapp
+COPY  Calculator-1.0-SNAPSHOT.jar /usr/src/myapp
+WORKDIR /usr/src/myapp
+#RUN  java -cp Calculator-1.0-SNAPSHOT.jar com/calculator/Calculator
+CMD ["java","-cp","Calculator-1.0-SNAPSHOT.jar","com/calculator/Calculator"]
 
-WORKDIR /usr/local/workspace/
-
-ADD target/Calculator-1.0-SNAPSHOT.jar Calculator/ 
 
