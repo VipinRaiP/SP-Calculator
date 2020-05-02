@@ -29,7 +29,7 @@ public class CalculatorTests {
         Assert.assertEquals(expectedResult, result);;
     }
     
- /*  @Test
+   @Test
     public void testMultiply() {
         int a = 10;
         int b = 25;
@@ -54,5 +54,4 @@ public class CalculatorTests {
         calculator.divide(a, b);
     }
 
-  */
 }
