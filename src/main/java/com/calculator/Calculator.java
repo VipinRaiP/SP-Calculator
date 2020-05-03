@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Calculator {
 
 	public static void main(String[] args) throws IOException{
-	    //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
         boolean done = false;
 	    while(true) {
@@ -14,21 +13,21 @@ public class Calculator {
             System.out.println("Calculator Application");
             System.out.println("1.Addition");
             System.out.println("2.Subtraction");
-            //System.out.println("3.Multiplication");
-            //System.out.println("4.Division");
-            System.out.println("3.Exit");
+            System.out.println("3.Multiplication");
+            System.out.println("4.Division");
+            System.out.println("5.Exit");
             System.out.println("Enter your choice : ");
-            int ch = sc.nextInt();//Integer.parseInt(br.readLine());
-            if(ch==3)
+            int ch = sc.nextInt();
+            if(ch==5)
                 break;
-            else if(ch>3 || ch<1) {
+            else if(ch>5 || ch<1) {
                 System.out.println("Invalid option");
                 continue;
             }
             System.out.println("Enter operand 1 : ");
-            int a = sc.nextInt();//Integer.parseInt(br.readLine());
+            int a = sc.nextInt();
             System.out.println("Enter operand 2 : ");
-            int b = sc.nextInt();//Integer.parseInt(br.readLine());
+            int b = sc.nextInt();
             switch (ch) {
                 case 1:
                     System.out.println("Result = " + add(a, b));
@@ -36,12 +35,12 @@ public class Calculator {
                 case 2:
                     System.out.println("Result = " + subtract(a, b));
                     break;
-                 /* case 3 :
+                  case 3 :
                     System.out.println("Result = " + multiply(a,b));
                     break;
                 case 4 :
                     System.out.println("Result = " + divide(a,b));
-                    break;*/
+                    break;
                 default:
                     System.out.println("Invalid option");
             }
@@ -57,8 +56,8 @@ public class Calculator {
 		return a - b;
 	}
 
-	/* Feature to be added later */
-/*
+	/* Feature added later */
+
 	public static long multiply(int a, int b) {
 		return a * b;
 	}
@@ -72,6 +71,6 @@ public class Calculator {
 		}
 		return result;
 	}
-*/
+
 
 }
