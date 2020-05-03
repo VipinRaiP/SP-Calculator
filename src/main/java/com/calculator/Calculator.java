@@ -7,7 +7,7 @@ public class Calculator {
 	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	    boolean done = false;
 	    while(!done) {
-	        System.out.println("----------------------------------------------------------------------------------------");
+            System.out.println("----------------------------------------------------------------------------------------");
             System.out.println("Calculator Application");
             System.out.println("1.Addition");
             System.out.println("2.Subtraction");
@@ -33,7 +33,7 @@ public class Calculator {
                 case 4 :
                     System.out.println("Result = " + divide(a,b));
                     break;*/
-                case 3 :
+                case 3:
                     done = true;
                     break;
                 default:
@@ -41,10 +41,6 @@ public class Calculator {
             }
             System.out.println("----------------------------------------------------------------------------------------");
         }
-		    //System.out.println("6 + 3 = " + add(6, 3));
-		    //System.out.println("6 - 3 = " + subtract(6,3));
-		    //System.out.println("6 * 3 = " + multiply(6,3));
-		    //System.out.println("6 / 3 = " + divide(6,3));
 	}
 
 	public static int add(int a, int b) {
