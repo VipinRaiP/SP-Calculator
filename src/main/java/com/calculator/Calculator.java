@@ -9,7 +9,7 @@ public class Calculator {
 	    //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
         boolean done = false;
-	    while(!done) {
+	    while(true) {
             System.out.println("----------------------------------------------------------------------------------------");
             System.out.println("Calculator Application");
             System.out.println("1.Addition");
@@ -19,6 +19,12 @@ public class Calculator {
             System.out.println("3.Exit");
             System.out.println("Enter your choice : ");
             int ch = sc.nextInt();//Integer.parseInt(br.readLine());
+            if(ch==3)
+                break;
+            else if(ch>3 || ch<1) {
+                System.out.println("Invalid option");
+                continue;
+            }
             System.out.println("Enter operand 1 : ");
             int a = sc.nextInt();//Integer.parseInt(br.readLine());
             System.out.println("Enter operand 2 : ");
@@ -36,9 +42,6 @@ public class Calculator {
                 case 4 :
                     System.out.println("Result = " + divide(a,b));
                     break;*/
-                case 3:
-                    done = true;
-                    break;
                 default:
                     System.out.println("Invalid option");
             }
