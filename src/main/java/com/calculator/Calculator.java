@@ -1,11 +1,14 @@
 package com.calculator;
 
 import java.io.*;
+import java.util.Scanner;
+
 public class Calculator {
 
 	public static void main(String[] args) throws IOException{
-	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	    boolean done = false;
+	    //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Scanner sc = new Scanner(System.in);
+        boolean done = false;
 	    while(!done) {
             System.out.println("----------------------------------------------------------------------------------------");
             System.out.println("Calculator Application");
@@ -15,11 +18,11 @@ public class Calculator {
             //System.out.println("4.Division");
             System.out.println("3.Exit");
             System.out.println("Enter your choice : ");
-            int ch = Integer.parseInt(br.readLine());
+            int ch = sc.nextInt();//Integer.parseInt(br.readLine());
             System.out.println("Enter operand 1 : ");
-            int a = Integer.parseInt(br.readLine());
+            int a = sc.nextInt();//Integer.parseInt(br.readLine());
             System.out.println("Enter operand 2 : ");
-            int b = Integer.parseInt(br.readLine());
+            int b = sc.nextInt();//Integer.parseInt(br.readLine());
             switch (ch) {
                 case 1:
                     System.out.println("Result = " + add(a, b));
